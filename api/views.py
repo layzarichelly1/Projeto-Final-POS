@@ -5,28 +5,28 @@ from .serializers import UserSerializer, TodosSerializer, CommentSerializer, Pos
 
 class UserViewSet(viewsets.ModelViewSet):
     """
-    Permite a manipulação de dados de Artistas
+    Permite a manipulação de dados de Usuários
     """
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
 class TodosViewSet(viewsets.ModelViewSet):
     """
-    Permite a manipulação de dados de Albuns
+    Permite a manipulação de dados de Todos
     """
     queryset = Todos.objects.all()
     serializer_class = TodosSerializer
 
 class CommentViewSet(viewsets.ModelViewSet):
     """
-    Permite a manipulação de dados de Músicas
+    Permite a manipulação de dados de Comments
     """
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
 
 class PostViewSet(viewsets.ModelViewSet):
     """
-    Permite a manipulação de dados de Músicas
+    Permite a manipulação de dados de Post
     """
     queryset = Post.objects.all()
     serializer_class = PostSerializer
