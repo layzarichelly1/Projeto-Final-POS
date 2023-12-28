@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .models import User, Todo, Comment, Post
-from .serializers import UserSerializer, TodoSerializer, CommentSerializer, PostSerializer
+from .models import User, Todos, Comment, Post
+from .serializers import UserSerializer, TodosSerializer, CommentSerializer, PostSerializer
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -10,12 +10,12 @@ class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
-class TodoViewSet(viewsets.ModelViewSet):
+class TodosViewSet(viewsets.ModelViewSet):
     """
     Permite a manipulação de dados de Albuns
     """
-    queryset = Todo.objects.all()
-    serializer_class = TodoSerializer
+    queryset = Todos.objects.all()
+    serializer_class = TodosSerializer
 
 class CommentViewSet(viewsets.ModelViewSet):
     """
